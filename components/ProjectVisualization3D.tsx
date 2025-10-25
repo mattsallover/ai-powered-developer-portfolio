@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Text, Html } from '@react-three/drei';
-import { Mesh } from 'three';
+import { Mesh, Vector3 } from 'three';
 import { PROJECTS } from '../constants';
 
 // Project coordinates mapping
@@ -92,9 +92,9 @@ const Scene: React.FC = () => {
 
       {/* Axis lines */}
       <mesh>
-        <arrowHelper args={[new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, 0, 0), 5, 0xff0000, 0.5, 0.3]} />
-        <arrowHelper args={[new THREE.Vector3(0, 1, 0), new THREE.Vector3(0, 0, 0), 5, 0x00ff00, 0.5, 0.3]} />
-        <arrowHelper args={[new THREE.Vector3(0, 0, 1), new THREE.Vector3(0, 0, 0), 5, 0x0000ff, 0.5, 0.3]} />
+        <arrowHelper args={[new Vector3(1, 0, 0), new Vector3(0, 0, 0), 5, 0xff0000, 0.5, 0.3]} />
+        <arrowHelper args={[new Vector3(0, 1, 0), new Vector3(0, 0, 0), 5, 0x00ff00, 0.5, 0.3]} />
+        <arrowHelper args={[new Vector3(0, 0, 1), new Vector3(0, 0, 0), 5, 0x0000ff, 0.5, 0.3]} />
       </mesh>
 
       {/* Axis labels */}
@@ -167,13 +167,30 @@ const ProjectVisualization3D: React.FC = () => {
           camera={{ position: [30, 30, 30], fov: 60 }}
           style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%)' }}
         >
-          <Scene />
+          <ambientLight intensity={0.4} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          
+          {/* Simple test sphere */}
+          <mesh position={[0, 0, 0]}>
+            <sphereGeometry args={[2, 32, 32]} />
+            <meshStandardMaterial color="#3B82F6" />
+          </mesh>
+          
+          <mesh position={[10, 10, 10]}>
+            <sphereGeometry args={[1.5, 32, 32]} />
+            <meshStandardMaterial color="#8B5CF6" />
+          </mesh>
+          
+          <mesh position={[-10, -10, -10]}>
+            <sphereGeometry args={[1, 32, 32]} />
+            <meshStandardMaterial color="#10B981" />
+          </mesh>
+
           <OrbitControls
             enablePan={true}
             enableZoom={true}
             enableRotate={true}
             autoRotate={false}
-            autoRotateSpeed={0.5}
           />
         </Canvas>
       </div>
