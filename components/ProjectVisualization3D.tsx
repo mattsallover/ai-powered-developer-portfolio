@@ -167,30 +167,13 @@ const ProjectVisualization3D: React.FC = () => {
           camera={{ position: [30, 30, 30], fov: 60 }}
           style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%)' }}
         >
-          <ambientLight intensity={0.4} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          
-          {/* Simple test sphere */}
-          <mesh position={[0, 0, 0]}>
-            <sphereGeometry args={[2, 32, 32]} />
-            <meshStandardMaterial color="#3B82F6" />
-          </mesh>
-          
-          <mesh position={[10, 10, 10]}>
-            <sphereGeometry args={[1.5, 32, 32]} />
-            <meshStandardMaterial color="#8B5CF6" />
-          </mesh>
-          
-          <mesh position={[-10, -10, -10]}>
-            <sphereGeometry args={[1, 32, 32]} />
-            <meshStandardMaterial color="#10B981" />
-          </mesh>
-
+          <Scene />
           <OrbitControls
             enablePan={true}
             enableZoom={true}
             enableRotate={true}
             autoRotate={false}
+            autoRotateSpeed={0.5}
           />
         </Canvas>
       </div>
