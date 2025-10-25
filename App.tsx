@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import IntersectionDiagram from './components/IntersectionDiagram';
 import Projects from './components/Projects';
 import Chatbot from './components/Chatbot';
 import Footer from './components/Footer';
@@ -13,7 +12,6 @@ const App: React.FC = () => {
       <Header />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <Hero />
-        <IntersectionDiagram />
         <Projects />
       </main>
       <Chatbot />
