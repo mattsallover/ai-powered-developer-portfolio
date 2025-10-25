@@ -2,9 +2,30 @@
 import { Project } from './types';
 
 export const PROJECTS: Project[] = [
-  // 🎵 Music & Audio Technology
+  // 💼 Professional Impact
   {
     id: 1,
+    title: 'Intuit Sales Operations Dashboard',
+    description: 'A comprehensive automation platform that connects Salesforce data to real-time performance metrics, reducing manual reporting time by over 70%. Built custom dashboards and AI-powered process flows using n8n and Supabase to eliminate friction across sales, marketing, and partner management teams.',
+    imageUrl: 'https://picsum.photos/seed/intuit-dashboard/600/400',
+    techStack: ['Salesforce', 'n8n', 'Supabase', 'Data Analytics', 'Process Automation', 'Lean Principles'],
+    liveUrl: '#',
+    repoUrl: '#',
+    category: 'Professional Impact',
+  },
+  {
+    id: 2,
+    title: 'AI Concert Outreach Automation',
+    description: 'An intelligent outreach system that automatically identifies concert opportunities and manages artist partnerships. Uses Serper.dev to extract upcoming concerts, structures data in n8n, and sends customized partnership emails via Gmail API with response tracking.',
+    imageUrl: 'https://picsum.photos/seed/concert-outreach/600/400',
+    techStack: ['n8n', 'Serper.dev', 'Gmail API', 'Google Sheets', 'Python', 'JSON Processing'],
+    liveUrl: '#',
+    repoUrl: '#',
+    category: 'Professional Impact',
+  },
+  // 🎵 Music & Audio Technology
+  {
+    id: 3,
     title: 'Guitar Practice Journal',
     description: 'A comprehensive web platform that helps guitarists structure their musical growth through AI and data-driven insights. Features practice session logging, progress tracking, and personalized AI recommendations for improvement.',
     imageUrl: 'https://picsum.photos/seed/guitar-journal/600/400',
@@ -14,7 +35,7 @@ export const PROJECTS: Project[] = [
     category: 'Music & Audio Technology',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Levine Load Mini - Guitar Attenuator',
     description: 'A hand-built reactive speaker attenuator designed for real feel and real tone at manageable volume levels. Features custom circuit design with air-core inductor and L-pad resistive load for authentic speaker dynamics.',
     imageUrl: 'https://picsum.photos/seed/guitar-pedal/600/400',
@@ -25,17 +46,17 @@ export const PROJECTS: Project[] = [
   },
   // 🤖 AI & Automation
   {
-    id: 3,
-    title: 'Concert Memories Video Wall',
+    id: 5,
+    title: 'PostShowProfit - Concert Video Platform',
     description: 'An innovative media-technology platform that transforms live concert experiences into monetizable digital assets. Uses AI to synchronize crowd-shot videos with professional audio, creating cinematic highlight films within 48 hours.',
-    imageUrl: 'https://picsum.photos/seed/concert-memories/600/400',
+    imageUrl: 'https://picsum.photos/seed/postshowprofit/600/400',
     techStack: ['AI/ML Pipeline', 'n8n Automation', 'Google Sheets API', 'Video Processing', 'Python'],
     liveUrl: '#',
     repoUrl: '#',
     category: 'AI & Automation',
   },
   {
-    id: 4,
+    id: 6,
     title: 'AI-Powered Developer Portfolio',
     description: 'This very portfolio! A modern React application with AI chat integration powered by Gemini. Features modular prompt system, responsive design, and showcases technical skills through interactive elements.',
     imageUrl: 'https://picsum.photos/seed/portfolio/600/400',
