@@ -2,6 +2,7 @@
 import { Project } from './types';
 
 export const PROJECTS: Project[] = [
+  // 🎵 Music & Audio Technology
   {
     id: 1,
     title: 'Guitar Practice Journal',
@@ -10,24 +11,28 @@ export const PROJECTS: Project[] = [
     techStack: ['React', 'TypeScript', 'Supabase', 'OpenAI GPT APIs', 'Tailwind CSS'],
     liveUrl: '#',
     repoUrl: 'https://github.com/mattsallover/Guitar-Journal',
+    category: 'Music & Audio Technology',
   },
   {
     id: 2,
-    title: 'Concert Memories Video Wall',
-    description: 'An innovative media-technology platform that transforms live concert experiences into monetizable digital assets. Uses AI to synchronize crowd-shot videos with professional audio, creating cinematic highlight films within 48 hours.',
-    imageUrl: 'https://picsum.photos/seed/concert-memories/600/400',
-    techStack: ['AI/ML Pipeline', 'n8n Automation', 'Google Sheets API', 'Video Processing', 'Python'],
-    liveUrl: '#',
-    repoUrl: '#',
-  },
-  {
-    id: 3,
     title: 'Levine Load Mini - Guitar Attenuator',
     description: 'A hand-built reactive speaker attenuator designed for real feel and real tone at manageable volume levels. Features custom circuit design with air-core inductor and L-pad resistive load for authentic speaker dynamics.',
     imageUrl: 'https://picsum.photos/seed/guitar-pedal/600/400',
     techStack: ['Circuit Design', 'Electronics', 'Ohm\'s Law', 'Resonance Modeling', 'Hardware Engineering'],
     liveUrl: '#',
     repoUrl: '#',
+    category: 'Music & Audio Technology',
+  },
+  // 🤖 AI & Automation
+  {
+    id: 3,
+    title: 'Concert Memories Video Wall',
+    description: 'An innovative media-technology platform that transforms live concert experiences into monetizable digital assets. Uses AI to synchronize crowd-shot videos with professional audio, creating cinematic highlight films within 48 hours.',
+    imageUrl: 'https://picsum.photos/seed/concert-memories/600/400',
+    techStack: ['AI/ML Pipeline', 'n8n Automation', 'Google Sheets API', 'Video Processing', 'Python'],
+    liveUrl: '#',
+    repoUrl: '#',
+    category: 'AI & Automation',
   },
   {
     id: 4,
@@ -37,5 +42,6 @@ export const PROJECTS: Project[] = [
     techStack: ['React', 'TypeScript', 'Gemini API', 'Tailwind CSS', 'Vite'],
     liveUrl: '#',
     repoUrl: 'https://github.com/mattsallover/ai-powered-developer-portfolio',
+    category: 'AI & Automation',
   },
 ];

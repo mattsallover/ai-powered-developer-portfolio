@@ -7,6 +7,7 @@ export interface Project {
   techStack: string[];
   liveUrl: string;
   repoUrl: string;
+  category: string;
 }
 
 export interface ChatMessage {
